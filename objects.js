@@ -21,3 +21,19 @@ function updateObject(obj) {
 const testObj = {};
 
 //console.log(updateObject(testObj));
+
+function personMaker() {
+  var person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    // replace `null` with a function that uses self reference to return
+    // full name
+    fullName:function() {
+      return this.firstName +" " +this.lastName;
+     }
+  }
+  return person;
+}
+
+const person=personMaker();
+console.log(person.fullName);
